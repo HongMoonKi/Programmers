@@ -1,8 +1,10 @@
 def solution(absolutes, signs):
-    answer = []
-    for i in range(len(absolutes)):
-        if signs[i]:
-            answer.append(absolutes[i])
+
+
+    answer = 0
+    for absolute, sign in zip(absolutes, signs):
+        if sign:
+            answer += absolute
         else:
-            answer.append(-absolutes[i])
-    return sum(answer)
+            answer -= absolute
+    return answer
