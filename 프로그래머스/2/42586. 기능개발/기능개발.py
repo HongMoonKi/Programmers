@@ -1,7 +1,7 @@
 def solution(progresses, speeds):
 
     answer = []
-    time = 0
+    time = 1
     count = 0
     
     while len(progresses)> 0:
