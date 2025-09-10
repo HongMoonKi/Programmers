@@ -1,8 +1,9 @@
 def solution(s):
-    
-    check = s.split(' ')
-    
-    for i in range(len(check)):
-        check[i] = check[i].capitalize()
-        
-    return ' '.join(check)
+    answer = []
+    s = s.split(" ")
+    for word in s:
+        if word:
+            answer.append(word[0].upper() + word[1:].lower())
+        else:
+            answer.append(word)
+    return " ".join(answer)
