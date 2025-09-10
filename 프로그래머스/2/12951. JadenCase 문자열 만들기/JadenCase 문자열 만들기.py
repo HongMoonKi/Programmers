@@ -1,9 +1,9 @@
 def solution(s):
     answer = []
     s = s.split(" ")
-    for word in s:
-        if word:
-            answer.append(word[0].upper() + word[1:].lower())
+    for i in s:
+        if i:
+            answer.append(i[0].upper() + i[1:].lower())
         else:
-            answer.append(word)
+            answer.append(i)
     return " ".join(answer)
