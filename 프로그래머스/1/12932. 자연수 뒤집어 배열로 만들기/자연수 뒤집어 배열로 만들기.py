@@ -1,5 +1,6 @@
 def solution(n):
+    n = str(n)
     answer = []
-    for i in str(n)[::-1]:
+    for i in n:
         answer.append(int(i))
-    return answer
+    return answer[::-1]
