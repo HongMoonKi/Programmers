@@ -1,8 +1,10 @@
 def solution(s):
-    s = s.lower()
-    if s.count('y') == 0 and s.count('p')==0:
-        return True
-    elif s.count('y') == s.count('p'):
-        return True
-    else:
-        return False
+    s= s.lower()
+    a = 0
+    b = 0
+    for i in s:
+        if i == "p":
+            a += 1
+        elif i == "y":
+            b += 1
+    return True if a == b else False
