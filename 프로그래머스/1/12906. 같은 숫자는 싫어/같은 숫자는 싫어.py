@@ -1,12 +1,8 @@
 def solution(arr):
-    answer = []
+    x = []
     for i in arr:
-        if len(answer) == 0:
-            answer.append(i)
-        else:
-            if answer[-1] == i:
-                answer.pop()
-                answer.append(i)
-            else:
-                answer.append(i)
-    return answer
+        if len(x) == 0:
+            x.append(i)
+        elif x[-1] != i:
+            x.append(i)
+    return x
