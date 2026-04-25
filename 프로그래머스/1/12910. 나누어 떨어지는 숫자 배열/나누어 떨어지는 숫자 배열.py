@@ -1,9 +1,7 @@
 def solution(arr, divisor):
-    answer = []
+    result = []
     for i in arr:
-        if i % divisor == 0:
-            answer.append(i)
-    answer.sort()
-    if len(answer) == 0:
-        answer.append(-1)
-    return answer
+        if i%divisor== 0:
+            result.append(i)
+    result.sort()
+    return result if len(result) != 0 else [-1]
