@@ -1,8 +1,8 @@
 def solution(d, budget):
-    answer = 0
-    d = sorted(d)
+    d.sort()
+    result = 0
     for i in d:
-        if budget - i >= 0:
-            answer += 1
+        if budget >= i:
             budget -= i
-    return answer 
+            result +=1
+    return result
