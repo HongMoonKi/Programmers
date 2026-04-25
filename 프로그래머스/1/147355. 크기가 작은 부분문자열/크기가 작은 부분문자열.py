@@ -1,9 +1,10 @@
 def solution(t, p):
+    x = []
     answer = 0
-    p_len = len(p)
-    t_len = len(t)
-    p = int(p)
-    for i in range(0,t_len+1-p_len):
-        if int(t[i:i+p_len]) <= p:
-            answer+=1
+    for i in range(len(t)-len(p)+1):
+        x.append(t[i:i+len(p)])
+    for j in x:
+        if j <= p:
+            answer += 1
     return answer
+    
