@@ -1,9 +1,7 @@
 def solution(sizes):
-    w = []
-    h = []
+    x,y =[],[]
     for i in sizes:
-        if i[0] < i[1]:
-            i[0], i[1] = i[1], i[0]
-        w.append(i[0])
-        h.append(i[1])
-    return max(w)*max(h)
+        a , b = min(i), max(i)
+        x.append(a)
+        y.append(b)
+    return max(x)*max(y)
