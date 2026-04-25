@@ -1,11 +1,5 @@
 def solution(price, money, count):
-    a = 1
-    result = 0
-    while a <= count:
-        result += price*a
-        a += 1
-        
-    if result >= money:
-        return result - money
-    else:
-        return 0
+    answer = 0
+    for i in range(1, count+1):
+        answer += price*i
+    return 0 if answer-money < 0 else answer-money
