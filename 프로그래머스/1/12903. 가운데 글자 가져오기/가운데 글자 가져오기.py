@@ -1,5 +1,5 @@
 def solution(s):
-    if len(s) % 2 == 1:
-        return s[int(len(s)/2)]
+    if len(s)%2==0:
+        return s[len(s)//2-1:len(s)//2+1]
     else:
-        return s[int(len(s)/2)-1]+s[int(len(s)/2)]
+         return s[len(s)//2]
