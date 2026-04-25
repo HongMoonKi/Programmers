@@ -1,6 +1,3 @@
 def solution(arr):
     arr.remove(min(arr))
-    if len(arr) == 0:
-        return [-1]
-    else: 
-        return arr
+    return [-1] if len(arr)==0 else arr
