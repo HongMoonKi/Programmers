@@ -1,9 +1,12 @@
 def solution(s):
+    last = {}
     answer = []
-    
-    for i in range(len(s)):
-        if s[i] in s[:i]:
-            answer.append(i-s[0:i].rindex(s[i]))
+
+    for i, c in enumerate(s):
+        if c in last:
+            answer.append(i - last[c])
         else:
             answer.append(-1)
+        last[c] = i
+
     return answer
