@@ -1,12 +1,12 @@
 def solution(k, score):
-    answer = []
-    a = []
-    while len(a)!=len(score):
-        for i in score:
-            a.append(i)
-            a.sort(reverse=True)
-            if len(a) <= k:
-                answer.append(a[-1])
-            else:
-                answer.append(a[k-1])
-    return answer
+    answer, result = [], []
+    for i in score:
+        if len(answer) <= k-1:
+            answer.append(i)
+            answer.sort()
+            result.append(answer[0])
+        else:
+            answer.append(i)
+            answer.sort()
+            result.append(answer[-k])
+    return result
