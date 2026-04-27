@@ -1,8 +1,8 @@
 def solution(k, m, score):
-    answer = 0
     score.sort(reverse=True)
-    for i in range(len(score)//m):
-        a = score[i*m:(i+1)*m]
-        answer += min(a)*m
+    answer = 0
+    result = [score[i:i+m] for i in range(0, len(score), m)]
+    for i in result:
+         if len(i) == m:
+            answer += min(i)*m
     return answer
-    
