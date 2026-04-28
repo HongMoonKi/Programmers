@@ -1,6 +1,6 @@
 def solution(n):
-    c = n+1
-    while True:
-        if bin(c).count('1') == bin(n).count('1'):
-            return c
-        c += 1
+    for i in range(n+1,1000000):
+        a = bin(n)
+        b = bin(i)
+        if a.count('1') == b.count('1'):
+            return i
