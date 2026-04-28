@@ -1,13 +1,8 @@
 def solution(s):
-    stack = []
+    answer = []
     for i in s:
-        if len(stack) == 0:
-            stack.append(i)
-        elif i != stack[-1]:
-            stack.append(i)
+        if len(answer) == 0 or answer[-1] != i:
+            answer.append(i)
         else:
-            stack.pop()
-    if len(stack) == 0:
-        return 1
-    else:
-        return 0
+            answer.pop(-1)
+    return 1 if len(answer) == 0 else 0
