@@ -1,16 +1,24 @@
 from collections import deque
 
 def solution(priorities, location):
-    queue = deque([(i, p) for i, p in enumerate(priorities)])
+    que = deque()
+
+    for i, priority in enumerate(priorities):
+        que.append((priority, i))
+
     count = 0
 
-    while queue:
-        idx, p = queue.popleft()
+    while que:
+        current_priority, current_index = que.popleft()
 
-        # 더 큰 우선순위가 뒤에 있는지 확인
-        if any(p < q[1] for q in queue):
-            queue.append((idx, p))  # 다시 뒤로
+        # 뒤에 더 높은 우선순위가 있으면 다시 뒤로 보냄
+        if any(current_priority < priority for priority, _ in que):
+            que.append((current_priority, current_index))
+
+        # 현재 프로세스를 실행
         else:
-            count += 1  # 실행됨
-            if idx == location:
+            count += 1
+
+            # 실행한 게 내가 찾던 프로세스라면
+            if current_index == location:
                 return count
