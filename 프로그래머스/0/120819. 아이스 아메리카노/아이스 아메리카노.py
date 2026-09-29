@@ -1,3 +1,6 @@
 def solution(money):
-    a = money//5500
-    return [a, money-(5500*a)]
+    answer = 0
+    while money >= 5500:
+        answer += 1
+        money = money - 5500
+    return [answer,money]
