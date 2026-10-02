@@ -1,7 +1,8 @@
 def solution(n, t):
-    i = 0
-    answer = n
-    while i < t:
-        answer = answer*2
-        i += 1
-    return answer
+    time = 0
+
+    while time < t:
+        n = n * 2
+        time += 1
+
+    return n
