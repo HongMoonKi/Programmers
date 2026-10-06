@@ -1,5 +1,3 @@
 def solution(x):
-    answer = 0
-    for i in str(x):
-        answer += int(i)
-    return True if x%answer == 0 else False
+    a = sum(list(map(int,str(x))))
+    return True if x%a == 0 else False
