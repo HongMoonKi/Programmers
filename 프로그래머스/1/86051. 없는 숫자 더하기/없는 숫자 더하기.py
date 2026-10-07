@@ -1,6 +1,7 @@
 def solution(numbers):
-    answer = 0
-    for i in range(0,10):
+    answer = [0,1,2,3,4,5,6,7,8,9]
+    result = 0
+    for i in answer:
         if i not in numbers:
-            answer += i
-    return answer
+            result += i
+    return result
