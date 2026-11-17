@@ -1,2 +1,4 @@
+import math
 def solution(n):
-    return (n**0.5+1)**2 if (n**0.5)%1 == 0 else -1
+
+    return -1 if int(math.sqrt(n)) != math.sqrt(n) else (math.sqrt(n)+1) ** 2
