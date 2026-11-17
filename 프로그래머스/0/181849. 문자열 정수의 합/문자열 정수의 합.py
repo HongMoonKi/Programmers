@@ -1,5 +1,2 @@
 def solution(num_str):
-    result = 0
-    for i in list(num_str):
-        result += int(i)
-    return result
+    return sum(list(map(int, num_str)))
