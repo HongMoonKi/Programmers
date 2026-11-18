@@ -1,3 +1,6 @@
 def solution(num, total):
-    avg = total // num
-    return [i for i in range(avg - (num-1)//2, avg + (num+2)//2)]
+    mid = total // num
+    start = mid - (num - 1) // 2
+    
+    # 3. start부터 num개의 연속된 숫자를 리스트로 만들어 반환합니다.
+    return [start + i for i in range(num)]
